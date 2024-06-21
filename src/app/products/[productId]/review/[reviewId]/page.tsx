@@ -1,4 +1,5 @@
 import React from 'react';
+import {notFound} from "next/navigation";
 
 const ReviewItem = ({params}: {
     params: {
@@ -6,6 +7,10 @@ const ReviewItem = ({params}: {
         reviewId: string,
     }
 }) => {
+    if (parseInt(params.reviewId) > 1000) {
+        notFound();
+    }
+
     return (
         <div>
             نظر {params.reviewId} برای محصول {params.productId}
