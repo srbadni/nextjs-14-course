@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import "./style.css"
+import {useState} from "react";
 
 
 const navLinks = [
@@ -16,9 +17,13 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode
 }) {
+    const [value, setValue] = useState<string>("");
     const pathname = usePathname();
     return (
         <div>
+            <div>
+                <input value={value} onChange={(event) => setValue(event.target.value)} type="text"/>
+            </div>
             <div style={{display: "flex", gap: 15}}>
                 {
                     navLinks.map(link => {
