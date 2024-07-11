@@ -2,10 +2,11 @@
 
 import React from 'react';
 
-const ErrorBoundary = () => {
+const ErrorBoundary = ({error, reset}: {error: Error, reset: () => void}) => {
     return (
         <div>
-            در بارگزاری نظر مشکلی رخ داده است
+            {error.message}
+            <button onClick={() => reset()}>تلاش مجدد</button>
         </div>
     );
 };
