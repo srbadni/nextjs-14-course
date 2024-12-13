@@ -1,0 +1,22 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "محصول 1",
+        "price": 700,
+        "description": "توضیحات 1"
+      },
+      {
+        "id": 2,
+        "title": "محصول 2",
+        "price": 1000,
+        "description": "توضیحات 2"
+      },
+      {
+        "id": 3,
+        "title": "محصول 3",
+        "price": 2500,
+        "description": "توضیحات 3"
+      }
+    ]
+  }
