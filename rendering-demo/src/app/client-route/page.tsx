@@ -1,15 +1,17 @@
 "use client"
-
+import {useContext} from "react";
+import { themeContext } from '@/components/themeProvider';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function ClientRoutePage() {
+  const theme = useContext(themeContext);
     const settings = {
         dots: true,
       };
     return <div>
-        my client component
+        <h1 style={{color: theme.colors.primary}}>my client component</h1>
         <div className="image-slider-container">
       <Slider {...settings}>
         <div>
