@@ -4,7 +4,7 @@ const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use((req, res, next) => {
-  console.log("رکوئست رسید");
+  console.log("request recived");
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Methods",
